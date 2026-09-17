@@ -1,0 +1,44 @@
+{
+  "file_type": "OCF_MANIFEST_FILE",
+  "ocf_version": "1.2.0",
+  "issuer": {
+    "object_type": "ISSUER",
+    "id": "issuer-example",
+    "legal_name": "Example Robotics, Inc.",
+    "formation_date": "2019-05-01",
+    "country_of_formation": "US",
+    "country_subdivision_of_formation": "DE"
+  },
+  "as_of": "2026-09-15",
+  "generated_at": "2026-09-15T12:00:00Z",
+  "stock_plans_files": [
+    {
+      "filepath": "./StockPlans.ocf.json",
+      "md5": "e02c0180244f3fdd1075c049fb411e28"
+    }
+  ],
+  "stock_legend_templates_files": [],
+  "stock_classes_files": [
+    {
+      "filepath": "./StockClasses.ocf.json",
+      "md5": "bbacf8038ee085002bd447ebebedf368"
+    }
+  ],
+  "vesting_terms_files": [],
+  "valuations_files": [],
+  "transactions_files": [
+    {
+      "filepath": "./Transactions.ocf.json",
+      "md5": "b66e53224d57c3ca49d958c12d2b2f80"
+    }
+  ],
+  "stakeholders_files": [
+    {
+      "filepath": "./Stakeholders.ocf.json",
+      "md5": "e0dc197706d8ebb1a331edba5c43ea5f"
+    }
+  ],
+  "comments": [
+    "Hand-constructed test fixture for ovf.ocf; see docs/ocf.md for the derivations."
+  ]
+}

@@ -1,0 +1,14 @@
+# Keep text portable across developer machines; preserve binary research artifacts.
+* text=auto
+*.py text eol=lf
+*.md text eol=lf whitespace=-blank-at-eol
+*.toml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.cff text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+# Matplotlib-generated SVG includes harmless whitespace in XML text elements.
+*.svg text eol=lf whitespace=-blank-at-eol
+*.png binary
+*.xlsx binary

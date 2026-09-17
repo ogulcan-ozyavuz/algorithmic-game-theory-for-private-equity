@@ -1,0 +1,157 @@
+{
+  "purpose": "Illustrative launch example; generated scenario, not observed transaction",
+  "python": "3.12.14",
+  "engine_version": "waterfall-v3",
+  "grid_points": 1001,
+  "max_cash_error_against_piecewise_formula": 1.4901161193847656e-08,
+  "example_report": {
+    "payouts": [
+      {
+        "security_id": "common",
+        "holder_id": "founders",
+        "amount": 40800000.0,
+        "preference_payout": 0.0,
+        "participation_payout": 0.0,
+        "residual_payout": 40800000.0,
+        "converted": false,
+        "payout_pct": 0.68,
+        "invested_capital": 0.0,
+        "effective_multiple": null
+      },
+      {
+        "security_id": "series_a",
+        "holder_id": "series_a",
+        "amount": 10200000.0,
+        "preference_payout": 0.0,
+        "participation_payout": 0.0,
+        "residual_payout": 10200000.0,
+        "converted": true,
+        "payout_pct": 0.17,
+        "invested_capital": 5000000.0,
+        "effective_multiple": 2.04
+      },
+      {
+        "security_id": "series_b",
+        "holder_id": "series_b",
+        "amount": 9000000.0,
+        "preference_payout": 9000000.0,
+        "participation_payout": 0.0,
+        "residual_payout": 0.0,
+        "converted": false,
+        "payout_pct": 0.15,
+        "invested_capital": 9000000.0,
+        "effective_multiple": 1.0
+      }
+    ],
+    "gross_exit": 60000000.0,
+    "transaction_costs": 0.0,
+    "net_exit": 60000000.0,
+    "converged": true,
+    "iterations": 1,
+    "max_unilateral_gain": 0.0,
+    "tolerance": 6.001e-05,
+    "conservation_error": 0.0,
+    "input_hash": "8ab591f8b0c51ed9d79800e6a834efd062f4739c84f40360a214aa1fbfd6472b",
+    "engine_version": "waterfall-v3",
+    "assumptions": [
+      "Each preferred position makes an independent conversion decision.",
+      "Reserved unallocated option capacity has no exit payment entitlement.",
+      "Single base currency; float accounting within reported tolerance.",
+      "No debt, unexercised option settlement, SAFE liquidity events or class voting."
+    ],
+    "multi_position_holders": [],
+    "as_of": null,
+    "debt_settlements": [],
+    "dividend_accruals": []
+  },
+  "payoff_matrix": [
+    {
+      "series_a_converts": false,
+      "series_b_converts": false,
+      "payouts_m": {
+        "common": 41.0,
+        "series_a": 10.0,
+        "series_b": 9.0
+      }
+    },
+    {
+      "series_a_converts": false,
+      "series_b_converts": true,
+      "payouts_m": {
+        "common": 42.10526315789474,
+        "series_a": 10.0,
+        "series_b": 7.894736842105263
+      }
+    },
+    {
+      "series_a_converts": true,
+      "series_b_converts": false,
+      "payouts_m": {
+        "common": 40.8,
+        "series_a": 10.2,
+        "series_b": 9.0
+      }
+    },
+    {
+      "series_a_converts": true,
+      "series_b_converts": true,
+      "payouts_m": {
+        "common": 41.73913043478261,
+        "series_a": 10.434782608695652,
+        "series_b": 7.826086956521739
+      }
+    }
+  ],
+  "equilibrium_survey": {
+    "positions": [
+      "series_a",
+      "series_b"
+    ],
+    "states_evaluated": 4,
+    "equilibria": [
+      {
+        "series_a": true,
+        "series_b": false
+      }
+    ],
+    "feasible_equilibria": [
+      {
+        "series_a": true,
+        "series_b": false
+      }
+    ],
+    "feasible_payoffs": [
+      {
+        "common": 40800000.0,
+        "series_a": 10200000.0,
+        "series_b": 9000000.0
+      }
+    ],
+    "payoff_unique": true,
+    "distinct_payoff_vectors": 1,
+    "tolerance": 6.001e-05,
+    "net_exit": 60000000.0
+  },
+  "source_sha256": {
+    "src/equilibria/__init__.py": "aad5c996008edb1e32cbfd42476699bc5340e4c0048fe4f8deb94105dd227338",
+    "src/ovf/__init__.py": "4c18ac80ec6d7dd73d6f50af0edb476f180a6e2fd4255764ce6fc3122bf3441c",
+    "src/ovf/__main__.py": "ce8a7f6e3e76f717083607d6e711ec24b7806206beab379299a472621f932244",
+    "src/ovf/antidilution.py": "cf6e10c620328839d3cf538304043f03ee86246ffb5b89542fc6839a206c840a",
+    "src/ovf/cli.py": "c2e675d6249807f6d7584ecd05296408da3b46be49597ef5951c878102f41940",
+    "src/ovf/contracts/__init__.py": "e830132cebd51f35c30d7b02c2fd72971e5dfaec5b6fef667dd2338ef5d2baea",
+    "src/ovf/contracts/captable.py": "d6639038adc2b4de9327be632e685dd2ca627799e71499a7cbaf8ea7a9965e03",
+    "src/ovf/contracts/safes.py": "88e1433fcefe73da23169b5b99d310c18b7766c1458e4c13307c1d43e4632c0f",
+    "src/ovf/contracts/securities.py": "8381f93c690f853b521a28dfbab8bad4f69e461dfd0c39c5c049c0789a934e45",
+    "src/ovf/core/__init__.py": "574e2f62e01ce857589556845cc6a966141ad535d76dfb6420479f6e05a417d1",
+    "src/ovf/core/types.py": "ccc22c1e3f1adc1d1f337330436e2d9a2fd65827d47106cacc5b1ee0c3392200",
+    "src/ovf/financing.py": "c9f5f89c21095875968808bfd26a8a6cd63033794f7d6847bd6ec074c71c73b5",
+    "src/ovf/instruments/__init__.py": "7e75541f2faec00ed5a7228af26116b0ba49115cd54832d383ba4ea5e559ed33",
+    "src/ovf/instruments/debt.py": "853e985ab3687a75cf28e404597cb5c80470bef818f9223455c46a30de6b5ca6",
+    "src/ovf/ocf/__init__.py": "1d731adfcaa34689cf277afe48d6788ef2ccf83e9b7562e3be8261755e406bdc",
+    "src/ovf/ocf/notes.py": "4db4d12373cefe515ff57d58a5969af39601901be357c99b78c843922cdeb401",
+    "src/ovf/ocf/reader.py": "18e6cd37b043f3db57666b517165f50a11d675c4709aa2d6bab6e273814676da",
+    "src/ovf/ocf/schema.py": "d08e4ea494c050cfc3434553b39641cac8a9206106cd743fb7c360cfbf76de39",
+    "src/ovf/ocf/writer.py": "91d5b2cd79242223173c395f07cd242e9b45aba8551e31ac167271c23150c718",
+    "src/ovf/waterfall.py": "9860174b3e04ac7896d5cbbe40c038d5728dc2807d56ffd2713db60134429fc4"
+  }
+}

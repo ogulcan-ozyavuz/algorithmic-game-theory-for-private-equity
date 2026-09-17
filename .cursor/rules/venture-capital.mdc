@@ -1,0 +1,14 @@
+---
+description: Venture Capital modeling rules and skill references for OVF/Equilibria
+globs: **/*.py, **/*.md
+alwaysApply: true
+---
+
+# Venture Capital Modeling Rules (OVF / Equilibria)
+
+When working on venture capital contracts, cap tables, waterfalls, or SAFE calculations:
+
+1. **Reference Canonical Skill:** Consult `.agents/skills/venture-capital/SKILL.md` and its `references/` directory.
+2. **Invariants:** Preserve proceeds conservation, share conservation, and non-negative payouts.
+3. **Equilibrium:** Never assume trivial conversion; use `ct.waterfall_detailed()` to verify game-theoretic Nash stability.
+4. **Verification:** Always run `.venv/bin/pytest` and `.venv/bin/ruff check src tests`.

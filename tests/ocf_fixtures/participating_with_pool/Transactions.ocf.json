@@ -1,0 +1,70 @@
+{
+  "file_type": "OCF_TRANSACTIONS_FILE",
+  "items": [
+    {
+      "object_type": "TX_STOCK_ISSUANCE",
+      "id": "iss-common-1",
+      "date": "2020-01-15",
+      "security_id": "CS-1",
+      "custom_id": "CS-1",
+      "stakeholder_id": "founders",
+      "security_law_exemptions": [],
+      "stock_class_id": "common",
+      "share_price": {"amount": "0.0001", "currency": "USD"},
+      "quantity": "8000000",
+      "stock_legend_ids": []
+    },
+    {
+      "object_type": "TX_STOCK_ACCEPTANCE",
+      "id": "acc-common-1",
+      "date": "2020-01-16",
+      "security_id": "CS-1"
+    },
+    {
+      "object_type": "TX_STOCK_PLAN_POOL_ADJUSTMENT",
+      "id": "pool-adj-1",
+      "date": "2021-01-01",
+      "stock_plan_id": "plan-2020",
+      "shares_reserved": "800000"
+    },
+    {
+      "object_type": "TX_STOCK_CLASS_AUTHORIZED_SHARES_ADJUSTMENT",
+      "id": "auth-series-a",
+      "date": "2021-03-01",
+      "stock_class_id": "series-a",
+      "new_shares_authorized": "3000000"
+    },
+    {
+      "object_type": "TX_STOCK_ISSUANCE",
+      "id": "iss-series-a-1",
+      "date": "2021-03-15",
+      "security_id": "PA-1",
+      "custom_id": "PA-1",
+      "stakeholder_id": "fund-a",
+      "security_law_exemptions": [],
+      "stock_class_id": "series-a",
+      "share_price": {"amount": "2.50", "currency": "USD"},
+      "quantity": "2000000",
+      "stock_legend_ids": []
+    },
+    {
+      "object_type": "TX_STOCK_PLAN_POOL_ADJUSTMENT",
+      "id": "pool-adj-2",
+      "date": "2022-06-30",
+      "stock_plan_id": "plan-2020",
+      "shares_reserved": "1000000"
+    },
+    {
+      "object_type": "TX_STOCK_CLASS_CONVERSION_RATIO_ADJUSTMENT",
+      "id": "ratio-adj-1",
+      "date": "2023-03-01",
+      "stock_class_id": "series-a",
+      "new_ratio_conversion_mechanism": {
+        "type": "RATIO_CONVERSION",
+        "conversion_price": {"amount": "2.00", "currency": "USD"},
+        "ratio": {"numerator": "5", "denominator": "4"},
+        "rounding_type": "NORMAL"
+      }
+    }
+  ]
+}

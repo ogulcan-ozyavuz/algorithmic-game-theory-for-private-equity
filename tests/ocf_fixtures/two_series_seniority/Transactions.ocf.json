@@ -1,0 +1,45 @@
+{
+  "file_type": "OCF_TRANSACTIONS_FILE",
+  "items": [
+    {
+      "object_type": "TX_STOCK_ISSUANCE",
+      "id": "iss-common-1",
+      "date": "2019-06-01",
+      "security_id": "CS-1",
+      "custom_id": "CS-1",
+      "stakeholder_id": "founders",
+      "security_law_exemptions": [],
+      "stock_class_id": "common",
+      "share_price": {"amount": "0.0001", "currency": "USD"},
+      "quantity": "8000000",
+      "stock_legend_ids": [],
+      "issuance_type": "FOUNDERS_STOCK"
+    },
+    {
+      "object_type": "TX_STOCK_ISSUANCE",
+      "id": "iss-series-a-1",
+      "date": "2021-03-15",
+      "security_id": "PA-1",
+      "custom_id": "PA-1",
+      "stakeholder_id": "fund-a",
+      "security_law_exemptions": [],
+      "stock_class_id": "series-a",
+      "share_price": {"amount": "2.50", "currency": "USD"},
+      "quantity": "2000000",
+      "stock_legend_ids": []
+    },
+    {
+      "object_type": "TX_STOCK_ISSUANCE",
+      "id": "iss-series-b-1",
+      "date": "2023-09-01",
+      "security_id": "PB-1",
+      "custom_id": "PB-1",
+      "stakeholder_id": "fund-b",
+      "security_law_exemptions": [],
+      "stock_class_id": "series-b",
+      "share_price": {"amount": "6.00", "currency": "USD"},
+      "quantity": "1500000",
+      "stock_legend_ids": []
+    }
+  ]
+}

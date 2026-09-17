@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Ozyavuz"
+    given-names: "Ogulcan"
+title: "Equilibria / Open Venture Framework: Startup Financing and Exit Calculations"
+version: 0.1.0-alpha
+url: "https://github.com/ogulcan-ozyavuz/equilibria-waterfall"
+license: Apache-2.0
+keywords:
+  - "venture capital"
+  - "cap table"
+  - "exit waterfall"
+  - "liquidation preference"
+  - "Nash equilibrium"
+  - "SAFE financing"
+  - "anti-dilution"

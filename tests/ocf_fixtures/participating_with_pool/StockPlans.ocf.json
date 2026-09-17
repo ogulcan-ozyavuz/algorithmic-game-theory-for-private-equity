@@ -1,0 +1,13 @@
+{
+  "file_type": "OCF_STOCK_PLANS_FILE",
+  "items": [
+    {
+      "object_type": "STOCK_PLAN",
+      "id": "plan-2020",
+      "plan_name": "2020 Equity Incentive Plan",
+      "initial_shares_reserved": "500000",
+      "default_cancellation_behavior": "RETURN_TO_POOL",
+      "stock_class_ids": ["common"]
+    }
+  ]
+}

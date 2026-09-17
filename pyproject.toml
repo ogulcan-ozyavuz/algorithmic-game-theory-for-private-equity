@@ -1,0 +1,123 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ovf"
+version = "0.1.0-alpha"
+description = "Open Venture Framework: Startup financing and exit waterfall calculations with explicit assumptions"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+authors = [
+    { name = "Ogulcan Ozyavuz" }
+]
+keywords = [
+    "venture-capital",
+    "cap-table",
+    "waterfall",
+    "preferred-stock",
+    "safe-financing",
+    "convertible-note",
+    "anti-dilution",
+    "open-cap-table-format"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial",
+    "Topic :: Scientific/Engineering :: Mathematics"
+]
+dependencies = [
+    "pydantic>=2.7.0",
+    "numpy>=1.26.0",
+    "scipy>=1.12.0"
+]
+
+[project.scripts]
+ovf = "ovf.cli:main"
+equilibria = "ovf.cli:main"
+ovf-mcp = "ovf_mcp.server:main"
+
+[project.optional-dependencies]
+io = [
+    "openpyxl>=3.1.0"
+]
+diff = [
+    "jax>=0.4.25",
+    "jaxlib>=0.4.25"
+]
+bayes = [
+    "numpyro>=0.14.0",
+    "powerlaw>=1.5"
+]
+gym = [
+    "gymnasium>=0.29.0"
+]
+mcp = [
+    "mcp>=2.2,<3"
+]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "hypothesis>=6.98.0",
+    "ruff>=0.3.0",
+    "mypy>=1.9.0",
+    # ovf_mcp is type-checked and tested with the rest of src/.
+    "mcp>=2.2,<3",
+    # Used only by the optional OCF schema-validation test, which is skipped unless
+    # OCF_SCHEMA_DIR points at the schema/ directory of an OCF v1.2.0 checkout.
+    "jsonschema>=4.21.0",
+    "referencing>=0.34.0"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ovf", "src/equilibria", "src/ovf_mcp"]
+
+# The MCP server serves these as ovf://docs/<name> resources; a checkout reads docs/ directly.
+[tool.hatch.build.targets.wheel.force-include]
+"docs/semantics.md" = "ovf_mcp/docs/semantics.md"
+"docs/limitations.md" = "ovf_mcp/docs/limitations.md"
+"docs/debt.md" = "ovf_mcp/docs/debt.md"
+"docs/dividends.md" = "ovf_mcp/docs/dividends.md"
+"docs/antidilution.md" = "ovf_mcp/docs/antidilution.md"
+"docs/financing.md" = "ovf_mcp/docs/financing.md"
+"docs/ocf.md" = "ovf_mcp/docs/ocf.md"
+"docs/fixtures.md" = "ovf_mcp/docs/fixtures.md"
+"docs/findings.md" = "ovf_mcp/docs/findings.md"
+"docs/mcp.md" = "ovf_mcp/docs/mcp.md"
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --strict-markers"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "C4"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+no_implicit_optional = true
+strict_optional = true
+mypy_path = "src"
+
+[[tool.mypy.overrides]]
+module = ["tests.*", "tests"]
+disallow_untyped_defs = false
+disallow_incomplete_defs = false

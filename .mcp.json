@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "equilibria": {
+      "type": "stdio",
+      "command": ".venv/bin/python",
+      "args": ["-m", "ovf_mcp"],
+      "env": {}
+    }
+  }
+}

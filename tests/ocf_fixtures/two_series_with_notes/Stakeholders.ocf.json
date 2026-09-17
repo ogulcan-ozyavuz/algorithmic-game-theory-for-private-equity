@@ -1,0 +1,40 @@
+{
+  "file_type": "OCF_STAKEHOLDERS_FILE",
+  "items": [
+    {
+      "object_type": "STAKEHOLDER",
+      "id": "founders",
+      "name": {"legal_name": "Founder Holdings LLC"},
+      "stakeholder_type": "INSTITUTION",
+      "current_relationship": "FOUNDER"
+    },
+    {
+      "object_type": "STAKEHOLDER",
+      "id": "fund-a",
+      "name": {"legal_name": "Series A Fund LP"},
+      "stakeholder_type": "INSTITUTION",
+      "current_relationship": "INVESTOR"
+    },
+    {
+      "object_type": "STAKEHOLDER",
+      "id": "fund-b",
+      "name": {"legal_name": "Series B Fund LP"},
+      "stakeholder_type": "INSTITUTION",
+      "current_relationship": "INVESTOR"
+    },
+    {
+      "object_type": "STAKEHOLDER",
+      "id": "angel",
+      "name": {"legal_name": "Angel Investor"},
+      "stakeholder_type": "INDIVIDUAL",
+      "current_relationship": "INVESTOR"
+    },
+    {
+      "object_type": "STAKEHOLDER",
+      "id": "bridge-fund",
+      "name": {"legal_name": "Bridge Lender LP"},
+      "stakeholder_type": "INSTITUTION",
+      "current_relationship": "INVESTOR"
+    }
+  ]
+}

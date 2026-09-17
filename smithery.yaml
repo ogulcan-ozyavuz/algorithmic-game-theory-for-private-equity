@@ -1,0 +1,26 @@
+# Smithery start configuration for the equilibria MCP server (console script `ovf-mcp`).
+#
+# Local stdio server. This file assumes `ovf-mcp` is already on PATH, for example after
+# `pip install -e '.[mcp]'` from a checkout. No Dockerfile is provided, and the `ovf`
+# distribution is not yet published on PyPI. See docs/mcp.md.
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required: []
+    properties:
+      allowedRoots:
+        type: string
+        description: >-
+          Optional. Directories the OCF tools (ocf_import, ocf_export) may read and write,
+          separated by the operating system's path separator (':' on macOS and Linux,
+          ';' on Windows). Passed to the server as OVF_MCP_ALLOWED_ROOTS. When unset, the
+          OCF tools can use any path the server process can reach.
+  commandFunction: |-
+    (config) => ({
+      command: 'ovf-mcp',
+      args: [],
+      env: config.allowedRoots ? { OVF_MCP_ALLOWED_ROOTS: config.allowedRoots } : {}
+    })
+  exampleConfig:
+    allowedRoots: /home/user/cap-tables

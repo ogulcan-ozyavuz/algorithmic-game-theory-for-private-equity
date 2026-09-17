@@ -1,0 +1,8 @@
+date,kind,amount
+2001-12-31,contribution,100
+2003-12-31,contribution,100
+2003-12-31,distribution,25
+2005-12-31,contribution,50
+2005-12-31,distribution,150
+2007-12-31,distribution,150
+2009-12-31,distribution,100
